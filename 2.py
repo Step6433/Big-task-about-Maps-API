@@ -32,10 +32,10 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_UP:
+            if event.key == pygame.K_PAGEUP:
                 if spn + 0.005 <= 2:
                     spn += 0.005
-            elif event.key == pygame.K_DOWN:
+            elif event.key == pygame.K_PAGEDOWN:
                 if spn - 0.005 >= 0.005:
                     spn -= 0.005
 pygame.quit()
