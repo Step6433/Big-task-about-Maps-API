@@ -91,6 +91,7 @@ while running:
             if input_rect.collidepoint(event.pos):
                 flag_text = 1
             elif reset_button.collidepoint(event.pos):
+                adres = ''
                 center_x, center_y = -0.124625, 51.500706
                 coords = first_coords
                 now_coords = first_coords
