@@ -142,8 +142,8 @@ while running:
                 if 0 <= event.pos[0] <= 650 and 0 <= event.pos[1] <= 450:
                     dx = (event.pos[0] - 650 / 2) / 650
                     dy = (450 / 2 - event.pos[1]) / 450
-                    x = center_x + dx * spn1 * 2
-                    y = center_y + dy * spn * 2
+                    x = center_x + dx * spn1
+                    y = center_y + dy * spn
                     search_text = ''
                     params = {
                         'apikey': 'dda3ddba-c9ea-4ead-9010-f43fbc15c6e3',
@@ -163,7 +163,8 @@ while running:
                             point = organization["geometry"]["coordinates"]
                             org_point = f"{point[0]},{point[1]}"
                             org_lon, org_lat = map(float, point)
-                            distance = math.sqrt((org_lon - x) ** 2 + (org_lat - y) ** 2) * 11100
+                            distance = math.sqrt((org_lon - x) ** 2 + (org_lat - y) ** 2) * 111.319
+                            print(distance)
                             if distance <= 50:
                                 now_coords = f"{org_lon},{org_lat}"
                                 if org_name:
